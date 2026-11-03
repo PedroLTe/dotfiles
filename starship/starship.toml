@@ -1,0 +1,30 @@
+add_newline = false
+format = "$username$hostname$directory$git_branch$git_status$line_break$character"
+
+[username]
+show_always = true
+style_user = "bold #ff8c00"
+format = "[$user]($style) "
+
+[hostname]
+ssh_only = false
+style = "bold yellow"
+format = "at [$hostname]($style) "
+
+[directory]
+style = "bold green"
+truncation_length = 8
+truncate_to_repo = false
+format = "in [$path]($style) "
+
+[git_branch]
+style = "bold purple"
+format = "on [$branch]($style) "
+
+[git_status]
+style = "bold cyan"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
