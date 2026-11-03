@@ -50,7 +50,7 @@ cd ~/dev/dotfiles && ./install.sh   # perfil padrão: debian-notebook
 
 O `install.sh` cria symlinks da home para o repo, então editar `~/.config/...` é editar o repo. Antes disso ele **move o que já existia** para `~/.dotfiles-backup/<data>/`.
 
-## Não gostei, quero voltar 😅
+## Não gostei, quero voltar
 
 ```bash
 ./restore.sh                 # devolve o backup mais recente e reinicia o i3
@@ -89,5 +89,5 @@ Aparece no próximo logout. Se mudar o wallpaper ou o CSS, rode o `instalar.sh` 
 O `wallpaper.sh` usa a primeira imagem que achar em `~/Imagens/wallpapers/`. Se a pasta estiver vazia, usa a `floresta.png` do repo. Para gerar outra floresta, mude o `random.seed` em `gerar-floresta.py` e rode:
 
 ```bash
-python3 wallpapers/gerar-floresta.py /tmp/f.svg && convert /tmp/f.svg wallpapers/floresta.png
+python3 wallpapers/gerar-floresta.py wallpapers/floresta.png   # gera o PNG direto (precisa do imagemagick)
 ```

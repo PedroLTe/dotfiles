@@ -1,4 +1,4 @@
-import random, math, sys
+import random, math, sys, subprocess
 random.seed(7)
 W,H=1920,1080
 def lerp(t):
@@ -26,4 +26,6 @@ o.append(f'<rect y="660" width="{W}" height="160" fill="#d3c6aa" opacity="0.10"/
 pinheiros(800,170,"#45574c",45); serra(840,20,"#3a4a40")
 pinheiros(920,230,"#2f3b35",35); serra(960,15,"#283029")
 pinheiros(1060,320,"#1e2420",22)
-o.append('</svg>'); open(sys.argv[1],'w').write("\n".join(o))
+o.append('</svg>')
+# manda o svg direto pro ImageMagick pela entrada padrão, sem arquivo .svg no meio
+subprocess.run(["convert","svg:-",sys.argv[1]],input="\n".join(o).encode(),check=True)
