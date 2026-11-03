@@ -38,13 +38,13 @@ wallpapers/ floresta.png + gerar-floresta.py (gerador do wallpaper)
 ```bash
 sudo apt install picom rofi feh fonts-jetbrains-mono gcc make ripgrep fd-find unzip
 # LazyVim pede Neovim >= 0.11.2; o do Debian 13 é 0.10.4, então uso o binário oficial em ~/.local:
-cd ~/.local/opt && curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz \
+mkdir -p ~/.local/opt && cd ~/.local/opt && curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz \
   && tar xzf nvim-linux-x86_64.tar.gz && ln -sf ~/.local/opt/nvim-linux-x86_64/bin/nvim ~/.local/bin/nvim
 # Nerd Font pros ícones (kitty usa "JetBrainsMono Nerd Font"):
 mkdir -p ~/.local/share/fonts/JetBrainsMonoNerd && cd $_ \
   && curl -LO https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz \
   && tar xJf JetBrainsMono.tar.xz && fc-cache -f
-./install.sh                 # perfil padrão: debian-notebook
+cd ~/dev/dotfiles && ./install.sh   # perfil padrão: debian-notebook
 ```
 
 O `install.sh` cria symlinks da home para o repo, então editar `~/.config/...` é editar o repo. Antes disso ele **move o que já existia** para `~/.dotfiles-backup/<data>/`.
