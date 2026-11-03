@@ -19,6 +19,7 @@ COMUNS=(
   "rofi/config.rasi:.config/rofi/config.rasi"
   "rofi/natureza.rasi:.config/rofi/natureza.rasi"
   "vim/vimrc:.vimrc"
+  "nvim:.config/nvim"
   "starship/starship.toml:.config/starship.toml"
 )
 
