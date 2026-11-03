@@ -18,6 +18,7 @@ COMUNS=(
   "i3status/config:.config/i3status/config"
   "picom/picom.conf:.config/picom/picom.conf"
   "kitty/kitty.conf:.config/kitty/kitty.conf"
+  "kitty/current-theme.conf:.config/kitty/current-theme.conf"
   "rofi/config.rasi:.config/rofi/config.rasi"
   "rofi/natureza.rasi:.config/rofi/natureza.rasi"
   "vim/vimrc:.vimrc"
