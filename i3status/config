@@ -1,0 +1,39 @@
+# i3status com cores da natureza
+general {
+        colors = true
+        color_good = "#a7c080"
+        color_degraded = "#dbbc7f"
+        color_bad = "#e67e80"
+        interval = 5
+        separator = " · "
+}
+
+order += "wireless _first_"
+order += "battery all"
+order += "volume master"
+order += "memory"
+order += "tztime local"
+
+wireless _first_ {
+        format_up = "wifi %essid %quality"
+        format_down = "wifi off"
+}
+battery all {
+        format = "%status %percentage"
+        status_chr = "carregando"
+        status_bat = "bat"
+        status_full = "cheia"
+        format_down = ""
+        low_threshold = 15
+}
+volume master {
+        format = "vol %volume"
+        format_muted = "vol mudo"
+}
+memory {
+        format = "ram %used"
+        threshold_degraded = "1G"
+}
+tztime local {
+        format = "%d/%m  %H:%M"
+}

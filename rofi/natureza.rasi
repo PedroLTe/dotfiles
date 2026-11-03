@@ -1,0 +1,41 @@
+/* rofi: tema natureza (Everforest) */
+* {
+    bg:      #2d353bee;
+    bg-alt:  #3d484d;
+    fg:      #d3c6aa;
+    musgo:   #a7c080;
+    agua:    #83c092;
+    cinza:   #859289;
+
+    background-color: transparent;
+    text-color: @fg;
+    font: "JetBrains Mono 11";
+}
+
+window {
+    width: 600px;
+    background-color: @bg;
+    border: 2px;
+    border-color: @musgo;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+mainbox { spacing: 12px; }
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius: 8px;
+    padding: 8px 12px;
+    spacing: 8px;
+    children: [ prompt, entry ];
+}
+prompt { text-color: @musgo; }
+entry  { placeholder: "procurar..."; placeholder-color: @cinza; }
+
+listview { lines: 8; spacing: 4px; scrollbar: false; }
+
+element { padding: 6px 10px; border-radius: 8px; spacing: 10px; }
+element selected { background-color: @musgo; text-color: #2d353b; }
+element-icon { size: 20px; }
+element-text { text-color: inherit; }
