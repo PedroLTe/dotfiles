@@ -1,0 +1,104 @@
+/* Tema GTK mínimo só pra tela de login: Adwaita escuro + paleta Everforest */
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk-contained-dark.css");
+
+@define-color bg      #2d353b;
+@define-color bg_alt  #3d484d;
+@define-color fg      #d3c6aa;
+@define-color musgo   #a7c080;
+@define-color agua    #83c092;
+@define-color cinza   #859289;
+@define-color terra   #e69875;
+@define-color erro    #e67e80;
+
+* { font-family: "JetBrains Mono"; }
+
+/* barra de cima (relógio, sessão, desligar) */
+#panel_window {
+    background-color: alpha(@bg, 0.75);
+    color: @fg;
+    border-bottom: 1px solid alpha(@musgo, 0.4);
+}
+#panel_window menubar,
+#panel_window menubar > menuitem { background: transparent; color: @fg; box-shadow: none; border: none; }
+#panel_window menubar > menuitem:hover { background-color: alpha(@musgo, 0.25); border-radius: 6px; }
+#panel_window menubar > menuitem label { color: @fg; }
+
+menu, .menu, .context-menu {
+    background-color: @bg;
+    color: @fg;
+    border: 1px solid @musgo;
+    border-radius: 8px;
+}
+menu menuitem:hover { background-color: @musgo; color: @bg; }
+
+/* caixinha de login */
+#login_window {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+#content_frame,
+#buttonbox_frame {
+    background-color: alpha(@bg, 0.88);
+    padding: 22px 28px;
+    border: 2px solid @musgo;
+}
+#content_frame   { border-radius: 14px 14px 0 0; border-bottom: none; }
+#buttonbox_frame { border-radius: 0 0 14px 14px; border-top: none; padding-top: 4px; }
+
+#login_window label { color: @fg; }
+
+entry {
+    background-color: @bg_alt;
+    color: @fg;
+    caret-color: @musgo;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 6px 10px;
+    box-shadow: none;
+}
+entry:focus { border-color: @agua; }
+
+#user_combo button, combobox button {
+    background-color: @bg_alt;
+    background-image: none;
+    color: @fg;
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+button {
+    background-image: none;
+    background-color: @bg_alt;
+    color: @fg;
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    text-shadow: none;
+}
+button:hover { background-color: shade(@bg_alt, 1.2); }
+
+#login_button {
+    background-color: @musgo;
+    color: @bg;
+    font-weight: bold;
+    padding: 6px 18px;
+}
+#login_button:hover { background-color: @agua; }
+#login_button label { color: @bg; }
+
+/* mensagem de senha errada */
+#greeter_infobar, infobar {
+    background-color: transparent;
+    border: none;
+}
+#greeter_infobar label { color: @erro; }
+
+/* janela de "desligar / reiniciar" */
+dialog, messagedialog, .dialog {
+    background-color: @bg;
+    color: @fg;
+    border: 2px solid @musgo;
+    border-radius: 12px;
+}

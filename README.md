@@ -30,6 +30,7 @@ rofi/       lançador de apps com tema natureza
 vim/        vimrc
 nvim/       LazyVim (tema everforest transparente)
 starship/   prompt
+lightdm/    tela de login (greeter GTK + tema Natureza)
 wallpapers/ floresta.png + gerar-floresta.py (gerador do wallpaper)
 ```
 
@@ -62,6 +63,17 @@ git checkout original-debian -- i3/config   # volta só o i3, por exemplo
 ```
 
 Para desligar só a transparência e os cantos arredondados: `pkill picom`.
+
+## Tela de login
+
+Tema do `lightdm-gtk-greeter` com a floresta de fundo e a caixa de login no estilo Everforest. Como o lightdm não lê a home, o script **copia** os arquivos pro sistema (precisa de sudo):
+
+```bash
+sudo ./lightdm/instalar.sh          # instala (guarda o original em /etc/lightdm/lightdm-gtk-greeter.conf.original)
+sudo ./lightdm/instalar.sh voltar   # devolve o login original
+```
+
+Aparece no próximo logout. Se mudar o wallpaper ou o CSS, rode o `instalar.sh` de novo.
 
 ## Atalhos novos
 
