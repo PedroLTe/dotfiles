@@ -1,5 +1,6 @@
 # i3status com cores da natureza
 general {
+        output_format = "i3bar"
         colors = true
         color_good = "#a7c080"
         color_degraded = "#dbbc7f"

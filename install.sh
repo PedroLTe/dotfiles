@@ -12,6 +12,8 @@ BACKUP="$HOME/.dotfiles-backup/$(date +%F_%H-%M-%S)"
 COMUNS=(
   "i3/config:.config/i3/config"
   "i3/wallpaper.sh:.config/i3/wallpaper.sh"
+  "i3/barra.sh:.config/i3/barra.sh"
+  "i3/energia.sh:.config/i3/energia.sh"
   "wallpapers/floresta.png:.config/i3/floresta.png"
   "i3status/config:.config/i3status/config"
   "picom/picom.conf:.config/picom/picom.conf"

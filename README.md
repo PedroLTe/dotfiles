@@ -22,7 +22,7 @@ Para adicionar o PC, crie `bash/bashrc.popos-pc` (e os `bin/*.popos-pc` que prec
 ```
 bash/       bashrc por máquina
 bin/        scripts pro ~/.local/bin (por máquina)
-i3/         config do i3 + script do wallpaper
+i3/         config do i3, wallpaper, barra.sh (botão ⏻) e energia.sh (menu)
 i3status/   barra com as cores do tema
 picom/      compositor: cantos arredondados, sombra, fade
 kitty/      terminal transparente (background_opacity 0.85)
@@ -70,6 +70,7 @@ Para desligar só a transparência e os cantos arredondados: `pkill picom`.
 | `Super+Enter` | kitty |
 | `Super+d` | rofi (apps) |
 | `Super+Tab` | rofi (trocar de janela) |
+| `Super+Shift+e` | menu de energia (bloquear, sair, reiniciar, desligar), o mesmo do botão ⏻ na barra |
 
 ## Wallpaper
 
